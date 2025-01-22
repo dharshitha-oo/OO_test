@@ -31,7 +31,7 @@ if os.path.isfile(file_path):
 vol_test = os.path.join("mnt","testvol")
 if os.path.isdir(vol_test):
         print(f"The directory '{vol_test}' exists.")
-    else:
+else:
         print(f"The directory '{vol_test}' does not exist.")
 file_name = os.path.join(vol_test, "user_details.json")
 if os.path.isfile(file_path):
