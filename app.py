@@ -31,7 +31,7 @@ if os.path.isdir(vol_test):
 else:
         print(f"The directory '{vol_test}' does not exist.")
   
-file_path = "/mnt/testvol/user_details.json"
+file_path = "/mnt/test/user_details.json"
 if os.path.isfile(file_path):
         print(f"The file '{file_path}' exists.")
   
