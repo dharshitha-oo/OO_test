@@ -47,6 +47,7 @@ if os.path.isfile(file_name):
       
 @app.route("/user/", methods=["GET"])
 def get_user(): 
+    file_name = "/mnt/user_details.json"
     with open(file_name, "r") as file:
             data= json.load(file) 
       
