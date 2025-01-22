@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify, abort, session, redirect, url_for
-import requests 
+
 from datetime import datetime, timedelta
 import os
 import json
-from urllib.parse import urlparse
+
 
 
 # Initialize Flask app
