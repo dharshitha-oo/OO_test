@@ -15,6 +15,13 @@ WRK_DIR = os.getcwd()
 
 vol = "/mnt/testvol"
 vol_test = "/mnt/"
+file_name = os.path.join(vol_test, "user_details.json")
+if os.path.isfile(file_path):
+        print(f"The file '{file_path}' exists. with os path join")
+file_name = "/mnt/user_details.json"
+if os.path.isfile(file_path):
+        print(f"The file '{file_path}' exists. with os path join")
+        
 if os.path.isdir(vol):
         print(f"The directory '{vol}' exists.")
 else:
