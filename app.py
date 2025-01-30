@@ -53,7 +53,7 @@ def get_user():
     return jsonify({"user": data})
 
 @app.route("/chat/")
-def get_user(): 
+def chat_res(): 
     
     return jsonify({"user": "Hi"})
 
