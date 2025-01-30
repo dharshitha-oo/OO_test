@@ -50,9 +50,12 @@ def get_user():
     file_name = "/mnt/user_details.json"
     with open(file_name, "r") as file:
             data= json.load(file) 
-      
-   
     return jsonify({"user": data})
+
+@app.route("/chat/")
+def get_user(): 
+    
+    return jsonify({"user": "Hi"})
 
 
 
