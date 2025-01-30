@@ -57,6 +57,10 @@ def chat_res():
     
     return jsonify({"user": "Hi"})
 
+@app.route("/")
+def home():
+    return render_template("home.html")  
+
 
 
 # Run the app
