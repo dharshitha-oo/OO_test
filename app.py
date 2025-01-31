@@ -52,8 +52,16 @@ def get_user():
             data= json.load(file) 
     return jsonify({"user": data})
 
-@app.route("/chat/")
+@app.route("/chat/", methods=["POST])
 def chat_res(): 
+    req = request.get_json()
+    
+    # Extract parameters from Dialogflow request
+    intent_name = req["queryResult"]["intent"]["displayName"]
+    parameters = req["queryResult"]["parameters"]
+    subject = parameters.get("subject", "")
+    user_query = parameters.get("user_query", "")
+    answer = f"ansewr to {user_query} and intent {intent_name}"
     
     return jsonify({"fulfillmentText": "answer"})
 
