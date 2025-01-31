@@ -55,7 +55,7 @@ def get_user():
 @app.route("/chat/")
 def chat_res(): 
     
-    return jsonify({"user": "Hi"})
+    return jsonify({"fulfillmentText": "answer"})
 
 @app.route("/")
 def home():
