@@ -62,8 +62,19 @@ def chat_res():
     subject = parameters.get("subject", "")
     user_query = parameters.get("user_query", "")
     answer = f"ansewr to {user_query} and intent {intent_name}"
-    
-    return jsonify({"fulfillmentText": "answer"})
+    response_data = {
+        "fulfillmentMessages": [
+            {"text": {"text": ["answer"]}},  # Main answer
+            {
+                "payload": {  # Custom payload for rich responses
+                    "richContent": [
+                        [{"type": "chips", "options": [{"text": intent_name}, {"text": answer} ]}]
+                    ]
+                }
+            }
+        ]
+    }
+    return jsonify(response_data) #({"fulfillmentText": "answer"})
 
 @app.route("/")
 def home():
