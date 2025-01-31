@@ -52,7 +52,7 @@ def get_user():
             data= json.load(file) 
     return jsonify({"user": data})
 
-@app.route("/chat/", methods=["POST])
+@app.route("/chat/", methods=["POST"])
 def chat_res(): 
     req = request.get_json()
     
